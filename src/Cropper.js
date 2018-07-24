@@ -179,14 +179,14 @@ class Cropper extends PureComponent {
       this.state.cropSize,
       this.props.zoom
     )
-    const { croppedAreaPercentages, croppedAreaPixels } = computeCroppedArea(
+    const { croppedAreaPixels } = computeCroppedArea(
       restrictedPosition,
       this.imageSize,
       this.state.cropSize,
       this.props.zoom
     )
     this.props.onCropComplete &&
-      this.props.onCropComplete(croppedAreaPercentages, croppedAreaPixels)
+      this.props.onCropComplete(croppedAreaPixels)
   }
 
   recomputeCropPosition = () => {

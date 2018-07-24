@@ -23,8 +23,8 @@ class App extends React.Component {
     this.setState({ crop })
   }
 
-  onCropComplete = (croppedArea, croppedAreaPixels) => {
-    console.log(croppedArea, croppedAreaPixels)
+  onCropComplete = (croppedAreaPixels) => {
+    console.log(croppedAreaPixels)
   }
 
   onZoomChange = zoom => {
