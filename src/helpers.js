@@ -90,11 +90,13 @@ function limitArea(max, value) {
  * Create image element,
  */
 const createImage = url => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
       const image = new Image();
-      image.addEventListener("load", () => resolve(image));
-      image.addEventListener("error", error => reject(error));
-      image.crossOrigin = "anonymous";// needed to avoid cross-origin issues on CodeSandbox
+      image.onload = function() {
+        resolve(image);
+      }
+      
+      image.crossOrigin = "Anonymous";// needed to avoid cross-origin issues on CodeSandbox
       image.src = url;
   });
 };
