@@ -1,6 +1,6 @@
 {
   "name": "react-zoom-pan-image",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component to zoom in & out, and pan image",
   "main": "dist/index.js",
   "repository": "git@github.com:ivanmaulana/react-zoom-pan-image.git",
